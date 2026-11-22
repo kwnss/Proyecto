@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Full Stack - Kensy Bautista Ramirez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/backend.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="encabezado">
+            <div>
+                <h1>Mi portafolio</h1>
+                <p>Programación Web Full Stack · UACJ</p>
+            </div>
+            <div class="controles">
+                <button id="boton-tema" type="button">Modo oscuro</button>
+                <button id="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">☰</button>
+            </div>
+        </div>
+        <nav id="menu" class="menu-principal" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#acceso">Acceso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="presentacion">
+            <div>
+                <h2>Hola, soy Kensy Bautista Ramirez</h2>
+                <p>Estudio Ingeniería en Sistemas Electrónicos Inteligentes en la UACJ.</p>
+                <p>En esta página comparto mi formación y algunos proyectos de programación.</p>
+            </div>
+            <img src="img/perfil.jpg" alt="Fotografía de Kensy Bautista Ramirez" width="220" height="220" decoding="async">
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <article>
+                <h3>Mi perfil</h3>
+                <p>Me gradué del CBTIS 114 como técnico en Programación. Ahora continúo mis estudios en la UACJ y estoy aprendiendo desarrollo web en la materia de Programación Web Full Stack.</p>
+            </article>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML para organizar el contenido.</li>
+                <li>CSS para los estilos y el diseño adaptable.</li>
+                <li>JavaScript para los eventos y formularios.</li>
+            </ul>
+            <h3>Tecnologías del proyecto</h3>
+            <dl>
+                <dt>Frontend</dt>
+                <dd>La parte que se ve en el navegador: HTML, CSS y JavaScript.</dd>
+                <dt>Backend</dt>
+                <dd>El servidor con Node.js y Express que recibe las solicitudes.</dd>
+                <dt>PostgreSQL</dt>
+                <dd>La base de datos donde se guardan proyectos, usuarios y mensajes.</dd>
+            </dl>
+        </section>
+
+        <section id="educacion">
+            <h2>Educación</h2>
+            <ol>
+                <li><strong>CBTIS 114.</strong> Me gradué como técnico en Programación.</li>
+                <li><strong>UACJ.</strong> Actualmente estudio Ingeniería en Sistemas Electrónicos Inteligentes.</li>
+            </ol>
+            <p>Curso Programación Web Full Stack, Inglés 3 y Procesamiento Digital de Señales.</p>
+            <h3>Servicio social</h3>
+            <p>Realizo mi servicio social como ADi (Auxiliar a Distancia de Pares).</p>
+            <p><a href="https://www.uacj.mx/" target="_blank" rel="noopener noreferrer">Página de la UACJ</a></p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="grid-tarjetas">
+                <article class="tarjeta">
+                    <h3>Portafolio personal</h3>
+                    <p>Página con mis datos, modo oscuro, menú móvil y formulario de contacto.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Prácticas web</h3>
+                    <p>Ejercicios de HTML, CSS y JavaScript.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="acceso">
+            <h2>Acceso con GitHub</h2>
+            <p id="estado-servicios" role="status">Revisando la conexión...</p>
+            <p id="estado-sesion" role="status"></p>
+            <a id="acceso-github" class="boton" href="/auth/github" hidden>Iniciar sesión con GitHub</a>
+            <button id="salir" type="button" hidden>Cerrar sesión</button>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="formulario-contacto" class="formulario" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="100" required aria-describedby="error-nombre">
+                    <p id="error-nombre" class="mensaje-error"></p>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input id="correo" name="correo" type="email" autocomplete="email" maxlength="254" required aria-describedby="error-correo">
+                    <p id="error-correo" class="mensaje-error"></p>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="5000" required aria-describedby="error-mensaje"></textarea>
+                    <p id="error-mensaje" class="mensaje-error"></p>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+                <p id="mensaje-exito" class="mensaje-exito" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kensy Bautista Ramirez · UACJ · 2026</p>
+    </footer>
+</body>
+</html>
